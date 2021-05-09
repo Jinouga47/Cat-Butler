@@ -11,7 +11,6 @@ public class GA_Algorithm : MonoBehaviour
     public int pos_ = 0;
     public int limit_ = 0;
     private List<Block> blocks = new List<Block>();//List of block objects
-    private List<Block> oldBlocks = new List<Block>();//List of block objects
     private List<List<Block>> rows = new List<List<Block>>();//List of block lists
     private List<List<List<Block>>> levels = new List<List<List<Block>>>();//List of row lists
     public float timer = 1f;
@@ -210,7 +209,7 @@ public class GA_Algorithm : MonoBehaviour
     {
         int x;
         int y;
-        if (/*levels.Count*/i == 0)
+        if (levels.Count == 0/*i == 0*/)
         {
             x = blocks[blocks.Count - 1].x;
             y = blocks[blocks.Count - 1].y;
